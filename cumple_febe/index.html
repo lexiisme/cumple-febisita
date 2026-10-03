@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para ranitasupermegapro 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DECORACIONES -->
+    <div class="decoracion sticker1">
+    <img src="img/sticker1.png" alt="">
+</div>
+
+<div class="decoracion sticker2">
+    <img src="img/sticker2.png" alt="">
+</div>
+
+<div class="decoracion sticker3">
+    <img src="img/sticker3.png" alt="">
+</div>
+
+<div class="decoracion sticker4">
+    <img src="img/sticker4.png" alt="">
+</div>
+
+
+    <!-- =========================
+         PANTALLA INICIAL
+    ========================== -->
+
+    <div class="inicio">
+
+        <p class="mini-texto">
+            tengo algo para ti...
+        </p>
+
+        <div class="tarjeta-inicial" onclick="abrirCarta()">
+
+            <span class="florcita">✿</span>
+
+            <h1>para ti ♡</h1>
+
+            <div class="linea-inicial"></div>
+
+            <p>
+                feliz cumpleaños,
+                <br>
+                febisita
+            </p>
+
+            <span class="ramita">🌿</span>
+
+        </div>
+
+        <p class="tocar-carta">
+            toca aquí ♡
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+
+    <div id="carta" class="carta">
+
+        <span class="decoracion-carta arriba">
+    ✦
+</span>
+
+<p class="nota-carta">
+    para ranitasuperpro ♡
+</p>
+
+<p class="fecha">
+    25 · 10 · 26
+</p>
+
+        <h2>
+            Feliz cumpleaños
+        </h2>
+
+        <div class="linea"></div>
+
+        <p class="mensaje">
+
+            Hoy es un día especial porque celebramos
+            a una persona muy importante para mí.
+
+        </p>
+
+        <p class="mensaje">
+
+            Gracias por todos los momentos, las risas
+            y por estar siempre ahí. Espero que este
+            nuevo año de tu vida esté lleno de cosas
+            bonitas, momentos inolvidables y muchas
+            razones para sonreír, y espero poder ser
+            parte de esos momentos.
+
+        </p>
+
+        <p class="firma">
+            con mucho cariño ♡
+        </p>
+
+        <span class="decoracion-carta abajo">
+    ♡
+</span>
+<div class="puntitos">
+    · · ·
+</div>
+
+        <button
+            onclick="siguientePagina()"
+            class="boton-continuar">
+
+            continuar →
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         SEGUNDA PÁGINA
+    ========================== -->
+
+    <div id="segunda-pagina" class="segunda-pagina">
+        <div class="ranita-scrapbook">
+    🐸
+</div>
+
+        <p class="mini-texto">
+            wait
+        </p>
+
+        <div class="ranita-pequena">
+            🐸
+        </div>
+
+        <h2>
+            our moments ♡
+        </h2>
+
+        <div class="fotos">
+
+    <div
+        class="foto foto1"
+        onclick="abrirFoto('img/1.jpg')">
+
+        <span class="cinta"></span>
+
+        <img
+            src="img/1.jpg"
+            alt="Foto 1">
+
+        <p>Febe, ere luz. ♡</p>
+
+    </div>
+
+
+    <div
+        class="foto foto2"
+        onclick="abrirFoto('img/2.jpg')">
+
+        <span class="cinta"></span>
+
+        <img
+            src="img/2.jpg"
+            alt="Foto 2">
+
+        <p>pero a veces brillas tanto</p>
+
+    </div>
+
+
+    <div
+        class="foto foto3"
+        onclick="abrirFoto('img/3.jpg')">
+
+        <span class="cinta"></span>
+
+        <img
+            src="img/3.jpg"
+            alt="Foto 3">
+
+        <p>que debo apartar la mirada ♡</p>
+
+    </div>
+
+</div>
+
+
+        <button
+            onclick="siguientePagina2()"
+            class="boton-continuar">
+
+            continuar →
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         VISOR DE FOTOS
+    ========================== -->
+
+    <div
+        id="visor"
+        class="visor"
+        onclick="cerrarFoto()">
+
+        <img
+            id="foto-grande"
+            src=""
+            alt="Foto">
+
+    </div>
+
+
+    <!-- =========================
+         TERCERA PÁGINA
+    ========================== -->
+
+    <div id="tercera-pagina" class="tercera-pagina">
+
+        <span class="decoracion-carta arriba">
+            ✿
+        </span>
+
+        <p class="mini-texto">
+            y una última cosita...
+        </p>
+
+
+        <!-- RANITA SECRETA -->
+
+        <div
+            class="ranita-pequena ranita-secreta"
+            onclick="secretoRanita()">
+
+            🐸
+
+        </div>
+
+        <p
+            id="mensaje-ranita"
+            class="mensaje-ranita">
+
+            otia q inteligente, me encontraste jeje
+            te quiero mucho febe, gracias por tu
+            gran amistad 🐸💚
+
+        </p>
+
+
+        <h2>
+            esta canción me recuerda a ti ♡
+        </h2>
+
+
+        <!-- REPRODUCTOR -->
+
+        <div class="musica">
+
+            <div
+                class="disco"
+                id="disco">
+
+                <img
+                    src="img/ranita-musica.png"
+                    alt="Ranita">
+
+            </div>
+
+
+            <p class="nombre-cancion">
+                The Only Exception
+            </p>
+
+            <p class="artista">
+                Paramore
+            </p>
+
+
+            <audio
+                id="musica"
+                src="music/cancion.mp3">
+
+            </audio>
+
+
+            <button
+                onclick="reproducirMusica()"
+                class="boton-musica">
+
+                ▶ reproducir
+
+            </button>
+
+        </div>
+
+
+        <!-- MENSAJE FINAL -->
+
+        <p class="mensaje-final">
+
+            Espero que este nuevo año de tu vida
+            esté lleno de momentos bonitos,
+            risas y muchas aventuras.
+
+            <br>
+            <br>
+
+            Te quiero muchísimo ♡
+
+        </p>
+
+
+        <!-- BOTÓN SORPRESA -->
+
+        <button
+            onclick="mostrarSorpresa()"
+            class="boton-sorpresa">
+
+            algo mas ... ♡
+
+        </button>
+
+
+        <!-- SORPRESA -->
+
+        <div
+            id="sorpresa"
+            class="sorpresa">
+
+            <span>
+                ✿
+            </span>
+
+            <p>
+
+                Gracias por existir y por formar parte
+                de tantos momentos bonitos de mi vida.
+
+            </p>
+
+            <p>
+
+                Espero que sigamos creando muchos
+                recuerdos juntas. ♡
+
+            </p>
+
+            <strong>
+
+                feliz cumpleaños, febisita 💚
+
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- LLUVIA FINAL -->
+
+    <div id="lluvia"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

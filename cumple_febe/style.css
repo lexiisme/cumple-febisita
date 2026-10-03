@@ -1,0 +1,1176 @@
+/* =========================
+   FUENTES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500&display=swap');
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F3F7EF;
+
+    background-image:
+        radial-gradient(
+            #D5E1D1 1px,
+            transparent 1px
+        );
+
+    background-size: 25px 25px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    color: #4F6853;
+
+    text-align: center;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   STICKERS DE LAS ESQUINAS
+========================= */
+
+.decoracion {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decoracion img {
+    width: 70px;
+    height: auto;
+    display: block;
+}
+
+.sticker1 {
+    top: 9%;
+    left: 9%;
+    transform: rotate(-8deg);
+}
+
+.sticker2 {
+    top: 11%;
+    right: 9%;
+    transform: rotate(8deg);
+}
+
+.sticker3 {
+    bottom: 10%;
+    left: 11%;
+    transform: rotate(-7deg);
+}
+
+.sticker4 {
+    bottom: 9%;
+    right: 10%;
+    transform: rotate(8deg);
+}
+
+/* =========================
+   TEXTO PEQUEÑO
+========================= */
+
+.mini-texto {
+
+    font-family: 'Bodoni Moda', serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #7F967B;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.inicio {
+
+    text-align: center;
+
+    animation: aparecerCarta .8s ease forwards;
+
+}
+
+
+.tarjeta-inicial {
+
+    width: 290px;
+
+    min-height: 240px;
+
+    padding: 35px 30px;
+
+    background-color: #FFFDF5;
+
+    border: 1px solid #D7DFD2;
+
+    border-radius: 4px;
+
+    box-shadow:
+        4px 6px 20px rgba(79,104,83,.15);
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.tarjeta-inicial:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+    box-shadow:
+        6px 10px 25px rgba(79,104,83,.20);
+
+}
+
+
+.tarjeta-inicial h1 {
+
+    margin: 20px 0 12px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #3F5744;
+
+}
+
+
+.tarjeta-inicial p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: #526653;
+
+}
+
+
+.florcita {
+
+    font-size: 25px;
+
+    color: #7F967B;
+
+}
+
+
+.ramita {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 25px;
+
+}
+
+
+.linea-inicial {
+
+    width: 65px;
+
+    height: 1px;
+
+    margin: auto;
+
+    background-color: #A8B9A4;
+
+}
+
+
+.tocar-carta {
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    color: #7F967B;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    border: 1px solid #7F9B7C;
+
+    padding: 12px 32px;
+
+    border-radius: 30px;
+
+    background-color: #DCE8D8;
+
+    color: #4F6853;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        all .3s ease;
+
+}
+
+
+button:hover {
+
+    background-color: #C8DBC4;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(79,104,83,.15);
+
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+
+    display: none;
+
+    width: 300px;
+
+    padding: 45px 38px;
+
+    background-color: #FFFDF5;
+
+    border: 1px solid #D7DFD2;
+
+    border-radius: 3px;
+
+    box-shadow:
+        4px 6px 20px rgba(79,104,83,.15),
+        inset 0 0 30px rgba(180,190,170,.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.carta::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid #E1E6DC;
+
+    pointer-events: none;
+
+}
+
+
+.carta.aparecer {
+
+    animation:
+        aparecerCarta .8s ease forwards;
+
+}
+
+
+@keyframes aparecerCarta {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            rotate(-2deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+}
+
+
+.carta h2 {
+
+    margin-top: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #3F5744;
+
+}
+
+
+.fecha {
+
+    font-family: 'Bodoni Moda', serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #7F967B;
+
+}
+
+
+/* detalle escrito a mano de la carta */
+
+.nota-carta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #7F967B;
+    text-align: left;
+    margin: 0 0 5px 8px;
+    transform: rotate(-3deg);
+}
+
+.fecha {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #A0AE99;
+}
+
+
+.mensaje {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #526653;
+
+    text-align: left;
+
+}
+
+
+.firma {
+
+    margin-top: 25px;
+
+    margin-right: 10px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #607A63;
+
+    text-align: right;
+
+}
+
+
+.decoracion-carta {
+    position: absolute;
+    font-size: 25px;
+    color: #8FA98C;
+}
+
+.arriba {
+    top: 15px;
+    left: 18px;
+    transform: rotate(-12deg);
+}
+
+.abajo {
+    bottom: 12px;
+    right: 18px;
+    transform: rotate(10deg);
+}
+
+
+.boton-continuar {
+
+    margin-top: 25px;
+
+    padding: 10px 22px;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   SEGUNDA PÁGINA
+========================= */
+
+.segunda-pagina {
+    position: relative;
+
+    display: none;
+
+    text-align: center;
+
+    animation:
+        aparecerCarta .8s ease forwards;
+
+}
+
+
+.segunda-pagina h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    color: #3F5744;
+
+}
+
+
+.ranita-pequena {
+
+    font-size: 60px;
+
+    margin: 15px;
+
+    animation:
+        saltito 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes saltito {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+}
+
+
+/* =========================
+   FOTOS SCRAPBOOK
+========================= */
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.foto {
+    width: 140px;
+    padding: 8px 8px 14px;
+    background: #FFFDF5;
+    box-shadow: 3px 5px 15px rgba(79,104,83,.15);
+    cursor: pointer;
+    position: relative;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* inclinaciones */
+
+.foto1 {
+    transform: rotate(-4deg);
+}
+
+.foto2 {
+    transform: rotate(3deg);
+}
+
+.foto3 {
+    transform: rotate(-2deg);
+}
+
+/* cintita */
+
+.cinta {
+    position: absolute;
+    width: 48px;
+    height: 17px;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(218, 225, 198, .85);
+    border-left: 1px solid rgba(150,160,130,.15);
+    border-right: 1px solid rgba(150,160,130,.15);
+    z-index: 2;
+}
+
+.foto2 .cinta {
+    transform: translateX(-50%) rotate(4deg);
+    background: rgba(225, 218, 192, .8);
+}
+
+.foto3 .cinta {
+    transform: translateX(-50%) rotate(-5deg);
+    background: rgba(210, 225, 207, .85);
+}
+
+/* imagen */
+
+.foto img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+    display: block;
+}
+
+/* frase */
+
+.foto p {
+    margin: 9px 2px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #607A63;
+}
+
+/* efecto al pasar el mouse */
+
+.foto:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.04);
+    box-shadow: 5px 10px 22px rgba(79,104,83,.22);
+    z-index: 3;
+}
+
+
+/* =========================
+   VISOR DE FOTOS
+========================= */
+
+.visor {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(40,55,43,.75);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 100;
+
+    cursor: pointer;
+
+}
+
+
+.visor img {
+
+    max-width: 85%;
+
+    max-height: 85%;
+
+    padding: 10px;
+
+    background: #FFFDF5;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* =========================
+   TERCERA PÁGINA
+========================= */
+
+.tercera-pagina {
+
+    display: none;
+
+    text-align: center;
+
+    max-width: 400px;
+
+    animation:
+        aparecerCarta .8s ease forwards;
+
+}
+
+
+.tercera-pagina h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #3F5744;
+
+}
+
+
+.ranita-secreta {
+
+    cursor: pointer;
+
+}
+
+
+.mensaje-ranita {
+
+    display: none;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    color: #4F6853;
+
+    margin-top: -5px;
+
+    animation:
+        aparecerSorpresa .6s ease forwards;
+
+}
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+.musica {
+    width: 280px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #FFFDF5;
+    border: 1px solid #D7DFD2;
+    box-shadow:
+        3px 5px 15px rgba(79,104,83,.12);
+    position: relative;
+    transform: rotate(-1deg);
+}
+
+
+.disco {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #DCE8D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        0 4px 12px rgba(79,104,83,.15);
+    border: 4px solid #F3F7EF;
+}
+
+.nombre-cancion {
+    margin: 5px 0 2px;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 17px;
+    color: #4F6853;
+}
+
+.artista {
+    margin: 0 0 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #8FA98C;
+}
+
+
+.disco img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.nombre-cancion {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    margin: 5px;
+
+    color: #3F5744;
+
+}
+
+
+.artista {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 12px;
+
+    color: #7F967B;
+
+}
+
+
+.boton-musica {
+
+    margin-top: 15px;
+
+    padding: 9px 20px;
+
+    font-size: 13px;
+
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-final {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #526653;
+
+}
+
+
+/* =========================
+   SORPRESA
+========================= */
+
+.boton-sorpresa {
+
+    margin-top: 25px;
+
+    background: #FFFDF5;
+
+    border: 1px solid #A8B9A4;
+
+}
+
+
+.sorpresa {
+    display: none;
+    width: 280px;
+    margin: 25px auto 0;
+    padding: 28px 24px;
+
+    background: #FFFDF5;
+    border: 1px dashed #A8B9A4;
+
+    box-shadow:
+        3px 5px 15px rgba(79,104,83,.12);
+
+    position: relative;
+    transform: rotate(1deg);
+
+    animation:
+        aparecerSorpresa .8s ease forwards;
+}
+
+.sorpresa::before {
+    content: "✿";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color: #9CAF98;
+    font-size: 18px;
+}
+
+.sorpresa::after {
+    content: "♡";
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: #9CAF98;
+    font-size: 18px;
+}
+
+
+.sorpresa span {
+
+    font-size: 25px;
+
+    color: #7F967B;
+
+}
+
+
+.sorpresa p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #526653;
+
+}
+
+
+.sorpresa strong {
+
+    display: block;
+
+    margin-top: 18px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: #3F5744;
+
+}
+
+
+@keyframes aparecerSorpresa {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            rotate(-2deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+}
+
+
+/* =========================
+   DESAPARECER
+========================= */
+
+.desaparecer {
+
+    animation:
+        desaparecer .5s ease forwards;
+
+}
+
+
+@keyframes desaparecer {
+
+    from {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+
+    }
+
+}
+
+
+/* =========================
+   LLUVIA FINAL
+========================= */
+
+#lluvia {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 200;
+
+}
+
+
+.particula {
+    position: absolute;
+    top: -40px;
+    font-size: 22px;
+    animation: caer 3s linear forwards;
+    pointer-events: none;
+}
+
+
+@keyframes caer {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(25px)
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(-25px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .decoracion img {
+        width: 55px;
+    }
+
+    .sticker1 {
+        left: 3%;
+    }
+
+    .sticker2 {
+        right: 3%;
+    }
+
+    .sticker3 {
+        left: 4%;
+    }
+
+    .sticker4 {
+        right: 4%;
+    }
+
+
+    .tarjeta-inicial {
+        width: 270px;
+    }
+
+
+    .carta {
+        width: 90%;
+        max-width: 330px;
+        padding: 42px 30px;
+    }
+
+
+    .fotos {
+        gap: 12px;
+    }
+
+
+    .foto {
+        width: 105px;
+    }
+
+
+    .foto img {
+        width: 105px;
+        height: 105px;
+    }
+
+
+    .musica {
+        width: 270px;
+    }
+
+
+    .tercera-pagina {
+        width: 90%;
+    }
+
+
+    .sorpresa {
+        width: 270px;
+    }
+
+}
+.puntitos {
+    margin-top: 15px;
+    color: #A8B7A2;
+    font-size: 18px;
+    letter-spacing: 6px;
+    opacity: .7;
+}
+.ranita-scrapbook {
+    position: absolute;
+    font-size: 38px;
+    top: 25px;
+    right: 25px;
+    transform: rotate(8deg);
+    filter: drop-shadow(2px 3px 2px rgba(79,104,83,.12));
+}
+.pagina-suave {
+    animation: paginaSuave .7s ease;
+}
+
+@keyframes paginaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ranita-secreta {
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.ranita-secreta:hover {
+    transform: rotate(-8deg) scale(1.12);
+}
+
+.mensaje-ranita {
+    display: none;
+    margin: 8px auto 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #607A63;
+    animation: aparecerSecreto .4s ease;
+}
+
+@keyframes aparecerSecreto {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
